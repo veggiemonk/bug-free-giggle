@@ -1,0 +1,15 @@
+//@import "../../../cdn/prestaweb-design/sass/modules/variables";
+@import "../../css/constants";
+
+.Footer {
+  position:   absolute;
+  bottom:     0;
+  width:      100%;
+  height:     $footer-height;
+  color:      $footer-color;
+  background: $footer-background-color;
+  p {
+    text-align:  center;
+    line-height: $footer-height;
+  }
+}

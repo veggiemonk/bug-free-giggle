@@ -1,0 +1,40 @@
+.button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid grey;
+  cursor: pointer;
+  box-sizing: border-box; }
+  .button:hover {
+    color: #333;
+    border-color: #888888;
+    outline: 0; }
+  .button:focus {
+    color: #333;
+    border-color: #888888;
+    outline: 0; }
+  .button .button_primary {
+    color: #fff;
+    background-color: #086cc3;
+    border-color: #086cc3; }
+    .button .button_primary:hover {
+      color: #fff;
+      background-color: #1eaedb;
+      border-color: #1eaedb; }
+    .button .button_primary:focus {
+      color: #fff;
+      background-color: #1eaedb;
+      border-color: #1eaedb; }
+
+/*# sourceMappingURL=buttons.css.map */

@@ -1,0 +1,25 @@
+$heightHeader: 80px;
+$header-height: $heightHeader;
+$heightFooter: 30px;
+$footer-height: $heightFooter;
+
+$groupSBlue: #086cc3;
+$footerColor: #424242;
+$footer-background-color: $footerColor;
+$footer-color: $footerColor;
+$footerTextColor: #aaa;
+
+// Colors
+$light-grey: #e1e1e1 !default;
+$dark-grey: #333 !default;
+//$primary-color: #33c3f0 !default;
+$primary-color: $groupSBlue;
+$secondary-color: lighten($dark-grey, 13.5%) !default;
+//$secondary-color: $groupSBlue;
+$border-color: #fff !default;
+$link-color: #1eaedb !default;
+$font-color: #222 !default;
+
+$form-default-border-color: $border-color;
+// Misc
+$global-radius: 4px !default;

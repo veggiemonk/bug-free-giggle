@@ -1,0 +1,109 @@
+@import 'constants';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
+}
+
+html,
+body {
+  height:     100%;
+  margin:     0;
+  font-size:  15px;
+  background: aliceblue;
+}
+
+/* Header ------------------------------------------------------------------------------------------------------------*/
+
+.Header {
+  height:           $heightHeader;
+  line-height:      $heightHeader;
+  background-color: $groupSBlue;
+  width:            100%;
+}
+
+.Header * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+  box-sizing:         border-box;
+}
+
+.Header li, .Header div, .Header a {
+  color: white;
+}
+
+.Header > ul {
+  display: block;
+  margin:  0;
+  padding: 0 1rem;
+}
+
+.Header > ul li ul {
+  padding: 0;
+  margin:  0;
+}
+
+.Header li {
+  list-style:         none;
+  cursor:             pointer;
+  -webkit-transition: all .2s;
+  -moz-transition:    all .2s;
+  -ms-transition:     all .2s;
+  -o-transition:      all .2s;
+  transition:         all .2s;
+}
+
+.Header span, .Header li, .Header i {
+  -webkit-user-select: none;
+  -moz-user-select:    none;
+  -ms-user-select:     none;
+  user-select:         none;
+}
+
+/* Transfer-----------------------------------------------------------------------------------------------------------*/
+
+#transfer,
+#transfer > div {
+  display: table;
+  width:   100%;
+}
+
+/* Aside -------------------------------------------------------------------------------------------------------------*/
+.Aside {
+  /*display: table;*/
+  float:      left;
+  width:      20%;
+  height:     calc(100vh - (#{$heightHeader} + #{$heightFooter}));
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Main --------------------------------------------------------------------------------------------------------------*/
+.Main {
+  /*display: table-cell;
+  float: left;
+  width: 79%;*/
+  /* less aside width */
+  height:     calc(100vh - (#{$heightHeader} + #{$heightFooter}));
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Footer ------------------------------------------------------------------------------------------------------------*/
+
+.Footer {
+  position:   absolute;
+  bottom:     0;
+  width:      100%;
+  height:     $heightFooter;
+  color:      $footerTextColor;
+  background: $footerColor;
+}
+
+.Footer p {
+  margin:      0;
+  padding:     0;
+  line-height: $heightFooter;
+  text-align:  center;
+}

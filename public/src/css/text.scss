@@ -1,0 +1,54 @@
+.text_overflow {
+  max-width:     100px;
+  overflow:      hidden;
+  text-overflow: ellipsis;
+  white-space:   nowrap;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.text_right {
+  text-align: right;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_justify {
+  text-align: justify;
+}
+
+.text_nowrap {
+  white-space: nowrap;
+}
+
+.text_lowercase {
+  text-transform: lowercase;
+}
+
+.text_uppercase {
+  text-transform: uppercase;
+}
+
+.text_capitalize {
+  text-transform: capitalize;
+}
+
+.text_muted {
+  color: #777;
+}
+
+.text_primary {
+  color: #337ab7;
+}
+
+.text_danger {
+  color: #a94442;
+}
+
+.active {
+  color: #d9edf7;
+}

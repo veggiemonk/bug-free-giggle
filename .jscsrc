@@ -1,0 +1,51 @@
+{
+  "esnext": true,
+  "excludeFiles": [
+    "jspm_packages/**"
+  ],
+  "disallowSemicolons": false,
+  "requireSemicolons": true,
+  "disallowVar": true,
+  "requireArrayDestructuring": true,
+  "requireObjectDestructuring": true,
+  /*"requireCamelCaseOrUpperCaseIdentifiers": { "strict": true },*/
+
+  "disallowEmptyBlocks": true,
+  "disallowQuotedKeysInObjects": true,
+  "disallowMultipleLineBreaks": false,
+  "disallowMixedSpacesAndTabs": true,
+  "disallowTrailingWhitespace": true,
+  "disallowSpacesInsideParentheses": false,
+  "disallowSpacesInsideBrackets": false,
+  "disallowSpacesInsideArrayBrackets": false,
+  "disallowSpacesInFunction": false,
+  "disallowSpacesInFunctionExpression": false,
+  "disallowSpacesInFunctionDeclaration": false,
+  "disallowSpacesInNamedFunctionExpression": false,
+  "disallowSpacesInAnonymousFunctionExpression": false,
+  "requireSpacesInAnonymousFunctionExpression": true,
+  "requirePaddingNewLinesBeforeLineComments": false,
+  "requireSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningRoundBrace": true,
+    "beforeOpeningCurlyBrace": true
+  },
+  "requirePaddingNewLinesAfterBlocks": false,
+  "requireSpaceBeforeBlockStatements": true,
+  "requireParenthesesAroundIIFE": true,
+  "requireSpacesInConditionalExpression": true,
+  "requireSpaceAfterComma": {
+    "allExcept": [
+      "trailing"
+    ]
+  },
+  "requireTrailingComma": false,
+  "validateQuoteMarks": {
+    "mark": "'",
+    "escape": true,
+    "ignoreJSX": true
+  },
+  "validateIndentation": 2,
+  "maxErrors": 100,
+  "maximumLineLength": 150,
+  "verbose": true
+}

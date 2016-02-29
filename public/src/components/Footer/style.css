@@ -1,0 +1,12 @@
+.Footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  color: #424242;
+  background: #424242; }
+  .Footer p {
+    text-align: center;
+    line-height: 30px; }
+
+/*# sourceMappingURL=style.css.map */

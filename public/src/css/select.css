@@ -1,0 +1,13 @@
+.select {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid white;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+  .select:focus {
+    border: 1px solid #086cc3;
+    outline: 0; }
+
+/*# sourceMappingURL=select.css.map */
