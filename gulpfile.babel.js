@@ -55,13 +55,13 @@ const sassConfig = {
 }
 
 /*
-** css-modulesify OPTIONS **
+ ** css-modulesify OPTIONS **
  rootDir: absolute path to your project's root directory. This is optional but providing it will result in better generated classnames. css-modulesify will try to use the browserify basedir if rootDir is not specified, if both are not specified it will use the location from which the command was executed.
  output: path to write the generated css. If not provided, you'll need to listen to the 'css stream' event on the bundle to get the output.
  jsonOutput: optional path to write a json manifest of classnames.
  use: optional array of postcss plugins (by default we use the css-modules core plugins).
  generateScopedName: (API only) a function to override the default behaviour of creating locally scoped classnames.
-* */
+ * */
 
 // GULP/BROWSERIFY MAIN TASK!
 function compile( watch ) {
@@ -98,7 +98,6 @@ function compile( watch ) {
       rebundle();
     } );
   }
-  copyLogo();
   minHTML();
   rebundle();
 }
@@ -111,13 +110,17 @@ function minHTML() {
     .pipe( gulp.dest( config.outputDir ) );
 }
 
-function copyLogo() {
-  return gulp.src( './public/src/components/logo.svg').pipe( gulp.dest('./dist'))
+/*function copyLogo() {
+  return gulp.src( './public/src/components/logo.svg' ).pipe( gulp.dest( './dist' ) )
 }
+
+gulp.task( 'logo', function copyLogo() {
+  return gulp.src( './public/src/components/logo.svg' ).pipe( gulp.dest( './dist' ) )
+} )*/
 
 // clean the output directory
 gulp.task( 'clean', function ( cb ) {
-  rimraf( config.outputDir, cb );
+  return rimraf( config.outputDir, cb );
 } );
 
 gulp.task( 'build', [ "clean" ], function () { return compile(); } );

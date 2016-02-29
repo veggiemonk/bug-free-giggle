@@ -1,4 +1,5 @@
 import koaRouter from 'koa-router';
+
 // Export the koa-router functions
 export const router = koaRouter();
 
@@ -6,5 +7,5 @@ export const router = koaRouter();
 import { root } from './root';
 
 // Define rules for each route
-router.get( '/v1/', root );
+router.post( '/v1/', root );
 

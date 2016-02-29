@@ -1,0 +1,403 @@
+{
+    "name": "PersonUnivers",
+    "attribute": [
+        {
+            "name": "id",
+            "attribute": [
+                {
+                    "name": "idPersonUniverse",
+                    "length": 10,
+                    "type": "number",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "address",
+            "attribute": [
+                {
+                    "name": "number",
+                    "length": 8,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "street",
+                    "length": 92,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "box",
+                    "length": 6,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "postcode",
+                    "length": 7,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "municipality",
+                    "length": 36,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "codeINS",
+                    "length": 10,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "countryCode",
+                    "length": 3,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "cdLanguageAddress",
+                    "length": 255,
+                    "type": "number",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "contact",
+            "attribute": [
+                {
+                    "name": "phoneNumber",
+                    "length": 15,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "privatePhoneNumber",
+                    "length": 15,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "FaxNumber",
+                    "length": 15,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "privateFaxNumber",
+                    "length": 15,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "gsmNumber",
+                    "length": 15,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "privateGsmNumber",
+                    "length": 15,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "emailAddress",
+                    "length": 120,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "privateEmailAddress",
+                    "length": 120,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "canal",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "birth",
+            "attribute": [
+                {
+                    "name": "birthDate",
+                    "type": "date",
+                    "required": false
+                },
+                {
+                    "name": "birthCountry",
+                    "length": 5,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "birthPostalCode",
+                    "length": 7,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "birthCity",
+                    "length": 50,
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "dependentPerson",
+            "attribute": [
+                {
+                    "name": "nbOtherPersonDependent",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "nbChildDependent",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "nbPers65PlusDependent",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "nbOtherPersHandiDependentInclude",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "nbChildHandiDependentInclude",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "nbPers65plusHandiDependentInclude",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "nbChildDependentTotal",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "nbPers65plusDependentTotal",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "nbOtherPersDependentTotal",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "childInput",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "familySituationInput",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "signature",
+            "attribute": [
+                {
+                    "name": "creationAuthor",
+                    "length": 9,
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "name": "creationDate",
+                    "type": "date",
+                    "required": true
+                },
+                {
+                    "name": "modificationAuthor",
+                    "length": 9,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "modificationDate",
+                    "type": "date",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "fiscal",
+            "attribute": [
+                {
+                    "name": "dependentPartner",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "civilStatus",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "professionalQualificationPartner",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                },
+                {
+                    "name": "weddingDate",
+                    "type": "date",
+                    "required": false
+                },
+                {
+                    "name": "partnerName",
+                    "length": 36,
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "name": "partnerBirthDate",
+                    "type": "date",
+                    "required": false
+                },
+                {
+                    "name": "handicappedWorker",
+                    "length": 5,
+                    "type": "number",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "universId",
+            "length": 10,
+            "type": "number",
+            "required": true
+        },
+        {
+            "name": "userIt",
+            "length": 12,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "name",
+            "length": 80,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "firstName",
+            "length": 60,
+            "type": "string",
+            "required": true
+        },
+        {
+            "name": "language",
+            "length": 5,
+            "type": "number",
+            "codeListName": "CD_LANGGUE",
+            "required": false
+        },
+        {
+            "name": "sex",
+            "length": 1,
+            "type": "number",
+            "codeListName": "SEXE",
+            "required": true
+        },
+        {
+            "name": "nationality",
+            "length": 3,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "nationalRegister",
+            "length": "11,4",
+            "type": "float",
+            "required": false
+        },
+        {
+            "name": "natureDocumentIdentity",
+            "length": 5,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "identityDocumentNumber",
+            "length": 12,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "correct",
+            "length": 5,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "memo",
+            "length": 255,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "educationLevel",
+            "length": 5,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "involvementStatus",
+            "length": 5,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "badgeNumber",
+            "length": 12,
+            "type": "string",
+            "required": false
+        },
+        {
+            "name": "fileIdentityNumber",
+            "length": 10,
+            "type": "number",
+            "required": false
+        },
+        {
+            "name": "noCarteTravailMzb",
+            "length": 6,
+            "type": "number",
+            "required": false
+        }
+    ]
+}

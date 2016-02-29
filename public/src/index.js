@@ -1,9 +1,11 @@
 import m from 'mithril';
 import he from 'he';
+
 let App = {};
 
 App.view = ( c, props ) => {
   //const { movies } = props;
+
   const movieList = [
     {
       "name":    "Blue Jasmine",

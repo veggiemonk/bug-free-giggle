@@ -46,9 +46,9 @@ var getResult = function ( query ) {
   return new Promise( function ( resolve, reject ) {
     executeQuery( query )
       .then( function ( result ) {
-        console.log( "executeQuery ends with succes" );
+        __DEV_MODE__  && console.log( "executeQuery ends with succes" );
         fetchRow( result.resultSet ).then( ( r ) => {
-          console.log( "fetchRow ends with succes" );
+          __DEV_MODE__  && console.log( "fetchRow ends with succes" );
           resolve( r );
         } ).catch( ( err )=> {
           reject( err )
