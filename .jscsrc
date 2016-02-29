@@ -1,14 +1,14 @@
 {
   "esnext": true,
   "excludeFiles": [
-    "jspm_packages/**"
+    "jspm_packages/**",
+    "node_modules/**"
   ],
   "disallowSemicolons": false,
   "requireSemicolons": true,
   "disallowVar": true,
   "requireArrayDestructuring": true,
   "requireObjectDestructuring": true,
-  /*"requireCamelCaseOrUpperCaseIdentifiers": { "strict": true },*/
 
   "disallowEmptyBlocks": true,
   "disallowQuotedKeysInObjects": true,

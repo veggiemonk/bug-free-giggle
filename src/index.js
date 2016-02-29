@@ -2,8 +2,6 @@ import koa from 'koa';
 import serve from 'koa-static';
 import {router} from './routes';
 import _ from 'lodash';
-import he from 'he';
-import kat  from './kat';
 
 // middleware
 import compression from './middleware/compress';
@@ -13,36 +11,6 @@ import koaBunyanLogger from 'koa-bunyan-logger';
 const movieList = require( '../test/movieList.json' );
 
 const app    = koa();
-const movies = _.map( movieList, ( m )=> Object.assign( m, { name: he.decode( m.name ) } ) );
-// test data
-/*var movies = [
- {
- "name":    "Blue Jasmine",
- "year":    [ "(2013)", "(2014)" ],
- "imdbURL": "http://www.imdb.com/title/tt2334873/"
- }, {
- "name":    "A nagy f&#xFC;zet",
- "year":    [ "(2013)", "(2014)" ],
- "imdbURL": "http://www.imdb.com/title/tt2324384/"
- }, {
- "name":    "Only Lovers Left Alive",
- "year":    [ "(2013)", "(2014)" ],
- "imdbURL": "http://www.imdb.com/title/tt1714915/"
- } ]*/
-
-function getQueryForTorrent( movies ) {
-  return _.map( movies, ( { name, year } ) => {
-    return {
-      query:     `${name} ${year[ 0 ]}`,
-      category:  'movies',
-      min_seeds: '1',
-      sort_by:   'seeders',
-      order:     'desc',
-      verified:  1,
-      //language: 'en'
-    }
-  } )
-}
 
 app.use( koaBunyanLogger( {
   name:  'markoa',
