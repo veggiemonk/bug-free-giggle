@@ -3,7 +3,7 @@ import serve from 'koa-static';
 import {router} from './routes';
 import _ from 'lodash';
 import qs from 'koa-qs';
-
+import cors from 'kcors';
 
 // middleware
 import compression from './middleware/compress';
@@ -12,6 +12,8 @@ import logger from 'koa-logger';
 
 
 const app = koa();
+
+app.use( cors() );
 
 qs( app, 'extended' );//query string
 

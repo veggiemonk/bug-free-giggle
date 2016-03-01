@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev-server": "nodemon index.js",
+    "dev-server": "nodemon -e js --ignore 'public/**/*.js' --ignore public/",
     "dev-web": "gulp",
     "echo": "node _echoServer.js",
     "frontend": "npm run dev-web",
@@ -37,7 +37,6 @@
     "babel-register": "^6.5.2",
     "bunyan": "^1.7.0",
     "co-body": "^4.0.0",
-    "he": "^0.5.0",
     "isomorphic-fetch": "^2.2.1",
     "koa": "^1.1.2",
     "koa-bunyan-logger": "^1.3.0",
