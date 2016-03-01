@@ -14,6 +14,9 @@ const _           = require( 'lodash' );
 const browserSync = require( 'browser-sync' );
 const reload      = browserSync.reload;
 
+
+//TODO: Browserify transform that strips console.log lines from your code https://www.npmjs.org/package/stripify
+//TODO: https://github.com/steida/gulp-closure-compiler
 const config = {
   entryFile:  './public/index.js',
   entryHTML:  './public/index.html',
@@ -39,20 +42,20 @@ const config = {
  styles.append();
  */
 
-const bConfig = {
+/*const bConfig = {
   debug:     true,
   transform: [ "babelify",
     {
       presets: [ "es2015", "stage-0" ],
       plugins: [ "mjsx" ]
     } ],
-}
+ }*/
 
-const sassConfig = {
+/*const sassConfig = {
   sourceMap:      true,        // doesn't work ==> how to debug?
   outputStyle:    'nested', //nested, expanded, compact, compressed
   sourceComments: true  // true enables additional debugging information in the output file as CSS comments
-}
+ }*/
 
 /*
  ** css-modulesify OPTIONS **
@@ -73,7 +76,7 @@ function compile( watch ) {
         rootDir: __dirname,
         output:  './dist/master.css'
       } )
-  )
+  );
 
   function rebundle() {
     bundler.bundle()
@@ -102,7 +105,7 @@ function compile( watch ) {
   rebundle();
 }
 
-function watch() { return compile( true ); };
+function watch() { return compile( true ); }
 
 function minHTML() {
   return gulp.src( config.entryHTML )
