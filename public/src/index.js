@@ -32,23 +32,17 @@ const getData = ( cb ) => {
 
 App.controller = ( props ) => {
   let c  = {};
-  c.data = m.prop();
+  c.keys = m.prop();
   //const cb = ( k ) => { c.data( k ) };
-  getData( c.data );
+  getData( c.keys );
   return c;
 };
 
 
 App.view = ( c, props ) => {
-  /*<div class="list-group">
-   {movies.map( ( movie ) => (
-   <a class="list-group-item" href="#">
-   {movie.name}<i class="fa fa-chevron-circle-right" style="float: right;"></i>
-   </a>
-   ) )  }
-   </div>*/
+
   const listKeys = () => {
-    return c.data().map( ( k ) => {
+    return c.keys().map( ( k ) => {
       return <a class="list-group-item" key="{k.ID}" href="#">
         {k.KEY}<i class="fa fa-chevron-circle-right" style="float: right;"></i>
       </a>;
@@ -57,7 +51,7 @@ App.view = ( c, props ) => {
   const k        = listKeys();
 
   const listTrad = () => {
-    return c.data().map( ( k ) => {
+    return c.keys().map( ( k ) => {
       return <input class="list-group-item" placeholder={k.KEY}/>
     } )
   }
