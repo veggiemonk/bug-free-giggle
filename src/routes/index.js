@@ -11,19 +11,25 @@ import { getKey, setKey, getAllKeys } from './key';
 import {
   getTranslation,
   updateTranslation,
-  updateKeyTranslation,
   allTranslation } from './translation';
+import { getMapping, getAllMapping, updateKeyTranslation } from './key_translation';
 
 // Define rules for each route
 router.post( '/', root );
 
+// Keys
 router.get( '/key/:id', getKey );
 router.get( '/key', getAllKeys );
 router.post( '/key', setKey );
 
-router.get( '/translation/:id', getTranslation );
-router.post( '/translation/key', updateKeyTranslation ); //mapping
+// Mapping
+router.get( '/mapping', getAllMapping );
+router.get( '/mapping/:id', getMapping );
+router.post( '/mapping', updateKeyTranslation );
+
+// Translation
 router.get( '/translation', allTranslation );
+router.get( '/translation/:id', getTranslation );
 router.post( '/translation', updateTranslation );
 
 
