@@ -10,6 +10,7 @@ import compression from './middleware/compress';
 import koaBunyanLogger from 'koa-bunyan-logger';
 import logger from 'koa-logger';
 
+const SERVICE_CHECK_HTTP = process.env.SERVICE_CHECK_HTTP || '/healthcheck';
 
 const app = module.exports = koa();
 
@@ -30,6 +31,11 @@ if ( __DEV_MODE__ ) {
 }
 
 app.use( compression );
+
+// Add health check endpoint
+app.use(route.get(SERVICE_CHECK_HTTP, function *() {
+  this.body = { uptime: process.uptime() };
+}));
 
 app.use( router.routes() );
 

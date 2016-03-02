@@ -23,12 +23,6 @@
   "bugs": {
     "url": "https://github.com/veggiemonk/bug-free-giggle/issues"
   },
-  "babel": {
-    "presets": [
-      "es2015",
-      "stage-0"
-    ]
-  },
   "homepage": "https://github.com/veggiemonk/bug-free-giggle#README",
   "dependencies": {
     "babel-polyfill": "^6.5.0",

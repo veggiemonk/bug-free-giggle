@@ -41,10 +41,10 @@ function compile( watch ) {
       } )
       .pipe( source( config.outputFile ) )
       .pipe( buffer() )
-      .pipe( sourcemaps.init( { loadMaps: true } ) )
+      /*.pipe( sourcemaps.init( { loadMaps: true } ) )
       // Add transformation tasks to the pipeline here.
       .pipe( uglify() )
-      .pipe( sourcemaps.write( './' ) )
+      .pipe( sourcemaps.write( './' ) )*/
       .pipe( gulp.dest( config.outputDir ) )
       .pipe( reload( { stream: true } ) );
   }
