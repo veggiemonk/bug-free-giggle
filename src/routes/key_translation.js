@@ -2,6 +2,43 @@ import getResult from '../db/dbManager';
 import parse from 'co-body';
 
 
+export function * addMapping( next ) {
+  // parse body for param
+  const body = yield parse.json( this, { limit: '1000kb' } );
+  if ( !body.data ) this.throw( 400, '"key" and "translation" param required' );
+  console.log( 'data:', body.data );
+  const {key, translation} = body.data;
+  if ( !key || !Number.isInteger( key ) || !translation || !Number.isInteger( translation ) ) {
+    this.throw( 400, `Bad Param, key = ${key}, translation = ${translation}` );
+  }
+  const id = '8484' + getRandomInt( 0, 999999 );
+  const sql = ` INSERT INTO I18N_KEY_TRANSLATION VALUES ( ${id}, ${key}, ${translation}) `;
+  __DEV_MODE__ && console.log( sql );
+
+  if ( body.fake ) {
+    this.body = sql;
+    this.type = 'text';
+    yield next;
+  }
+
+  let result;
+  try {
+    result = yield getResult( sql );
+  } catch ( ex ) {
+    result = `ERROR: ${ ex }`;
+  }
+
+  this.body = result;
+  this.type = 'json';
+  yield next;
+}
+
+//TODO: replace with sequence!!!!
+function getRandomInt( min, max ) {
+  return Math.floor( Math.random() * (max - min) ) + min;
+}
+
+//-------------------------------------------------------
 export function * getMapping( next ) {
   const body = yield parse.json( this, { limit: '1000kb' } );
   if ( !body.data ) this.throw( 400, 'ID required' );
@@ -29,6 +66,7 @@ export function * getMapping( next ) {
   yield next;
 }
 
+//-------------------------------------------------------
 export function * getAllMapping( next ) {
 
   const sql = ` SELECT *
@@ -52,22 +90,8 @@ export function * getAllMapping( next ) {
 
 }
 
-function getRandomInt( min, max ) {
-  return Math.floor( Math.random() * (max - min) ) + min;
-}
 
-
-export function * updateKeyTranslation( next ) {
-  // parse body for param
-  const body = yield parse.json( this, { limit: '1000kb' } );
-  if ( !body.data ) this.throw( 400, '"key" and "translation" param required' );
-  console.log( 'data:', body.data );
-  const {key, translation} = body.data;
-  if ( !key || !translation ) this.throw( 400, `Bad Param, key = ${key}, translation = ${translation}` );
-  const id  = '8484' + getRandomInt( 0, 999999 );
-  const sql = ` INSERT INTO I18N_KEY_TRANSLATION VALUES ( ${id}, ${key}, ${translation}) `;
-  __DEV_MODE__ && console.log( sql );
-  //update all keys with SQL
-  this.body = 'OK';
-  yield next;
+//-------------------------------------------------------
+export function * updateMapping( next ) {
+  this.body = 'KO';
 }

@@ -66,6 +66,7 @@
     "mithrilify": "0.0.6",
     "nodemon": "^1.9.1",
     "sassr": "^0.1.1",
+    "supertest": "^1.2.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"

@@ -11,7 +11,7 @@ import koaBunyanLogger from 'koa-bunyan-logger';
 import logger from 'koa-logger';
 
 
-const app = koa();
+const app = module.exports = koa();
 
 app.use( cors() );
 
@@ -38,6 +38,7 @@ app.use( serve( './public' ) );
 // export the koa app for test cases
 export default app.listen( __PORT__ || 3000 );
 
-if (!module.parent) app.listen(3000);
+
+/*if (!module.parent) app.listen(3000);*/
 
 console.info( `==> Server now is listening on port ${__PORT__}` );

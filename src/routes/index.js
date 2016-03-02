@@ -7,30 +7,52 @@ export const router = koaRouter( {
 
 // Import the generator functions from each route
 import { root } from './root';
-import { getKey, setKey, getAllKeys } from './key';
+import { addKey, getKey, setKey, getAllKeys } from './key';
 import {
+  addTranslation,
   getTranslation,
   updateTranslation,
-  allTranslation } from './translation';
-import { getMapping, getAllMapping, updateKeyTranslation } from './key_translation';
+  getAllTranslation } from './translation';
+import { addMapping, getMapping, getAllMapping, updateMapping } from './key_translation';
 
 // Define rules for each route
 router.post( '/', root );
 
+/**
+ -------------
+ -- PATTERN --
+ -------------
+ 1. ADD
+ 2. GET
+ 3. GET ALL
+ 4. UPDATE
+
+ Question ?
+ - DELETE one ?
+ - ADD many?
+ - UPDATE many?
+ - DELETE many ?
+ */
+
 // Keys
+router.put( '/key', addKey );
 router.get( '/key/:id', getKey );
 router.get( '/key', getAllKeys );
 router.post( '/key', setKey );
 
 // Mapping
-router.get( '/mapping', getAllMapping );
+router.put( '/mapping', addMapping );
 router.get( '/mapping/:id', getMapping );
-router.post( '/mapping', updateKeyTranslation );
+router.get( '/mapping', getAllMapping );
+router.post( '/mapping', updateMapping );
+
 
 // Translation
-router.get( '/translation', allTranslation );
+router.put( '/translation', addTranslation );
 router.get( '/translation/:id', getTranslation );
+router.get( '/translation', getAllTranslation );
 router.post( '/translation', updateTranslation );
+
 
 
 
